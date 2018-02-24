@@ -21,5 +21,9 @@ coverage
 .grunt
 
 # Compiled Dirs (http://nodejs.org/api/addons.html)
-bundle.js
+public/bundle.js
+
+# API key
+config/map.js
+
 
