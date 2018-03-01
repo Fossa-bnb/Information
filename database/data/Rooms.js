@@ -54,3 +54,5 @@ for (let i = 1; i < 101; i += 1) {
     hostVarified: faker.random.boolean(),
   });
 }
+
+module.exports = rooms;
