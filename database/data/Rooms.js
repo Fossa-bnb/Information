@@ -5,7 +5,7 @@ const rooms = [];
 for (let i = 1; i < 101; i += 1) {
   rooms.push({
     id: i,
-    title: faker.catchPhrase(),
+    title: faker.company.catchPhrase(),
     city: faker.address.city(),
     hostLlocation: `${faker.address.city()} ${faker.address.country()}`,
     hostName: faker.name.firstName(),
