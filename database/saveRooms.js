@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
-const Rooms = require('./roomSchema.js');
+const Room = require('./roomSchema.js');
 
 mongoose.connect('mongodb://localhost/airbnbInfo');
 
 
 const saveRooms = (incomingRoom) => {
-
-  let fakeRoom = new Rooms({
+  const fakeRoom = new Room({
     id: incomingRoom.id,
     title: incomingRoom.title,
     city: incomingRoom.city,
