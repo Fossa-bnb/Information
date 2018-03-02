@@ -57,8 +57,9 @@ const saveRooms = (incomingRoom) => {
     hostVarified: incomingRoom.hostVarified,
   });
 
-  fakeRoom.save((err, fakeRoom) => {
+  fakeRoom.save((err, fakeroom) => {
     if (err) return console.error(err);
+    if (fakeroom) return console.log('Saved Room: ', fakeroom.id);
   });
 };
 
