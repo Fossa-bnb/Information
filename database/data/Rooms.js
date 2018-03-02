@@ -7,7 +7,7 @@ for (let i = 1; i < 101; i += 1) {
     id: i,
     title: faker.company.catchPhrase(),
     city: faker.address.city(),
-    hostLlocation: `${faker.address.city()} ${faker.address.country()}`,
+    hostLocation: `${faker.address.city()} ${faker.address.country()}`,
     hostName: faker.name.firstName(),
     hostDateJoind: `${faker.date.month()} ${faker.date.past()}`,
     hostEmail: faker.internet.email(),
