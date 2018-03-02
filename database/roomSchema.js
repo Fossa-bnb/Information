@@ -59,7 +59,7 @@ const roomSchema = mongoose.Schema({
   hostVarified: Boolean,
 });
 
-const Rooms = mongoose.model('Roons', roomSchema);
+const Room = mongoose.model('Room', roomSchema);
 
 
-module.exports = Rooms;
+module.exports = Room;
