@@ -18,8 +18,6 @@ const App = () => (
     <SleepingArrangments />
     <HouseRules />
     <CancelPolicy />
-
-
   </div>
 );
 
