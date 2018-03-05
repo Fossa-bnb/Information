@@ -1,5 +1,5 @@
 import React from 'react';
-import Amenities from '../client/components/ammenities';
+import Amenities from '../client/components/amenities';
 
 describe('<Amenities /> Component', () => {
   it('should render a div', () => {
