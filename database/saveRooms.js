@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const Room = require('./roomSchema.js');
 
-mongoose.connect('mongodb://localhost/airbnbInfo');
+// mongoose.connect('mongodb://localhost/airbnbInfo');
 
 
 const saveRooms = (incomingRoom) => {
