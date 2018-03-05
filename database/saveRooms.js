@@ -1,8 +1,4 @@
-// const mongoose = require('mongoose');
 const Room = require('./roomSchema.js');
-
-// mongoose.connect('mongodb://localhost/airbnbInfo');
-
 
 const saveRooms = (incomingRoom) => {
   const fakeRoom = new Room({
@@ -15,7 +11,7 @@ const saveRooms = (incomingRoom) => {
     hostEmail: incomingRoom.hostEmail,
     hostImageUrl: incomingRoom.hostImageUrl,
     mapUrl: incomingRoom.mapUrl,
-    roomType: incomingRoom.type,
+    roomType: incomingRoom.roomType,
     hostLanguage: incomingRoom.hostLanguage,
     hostResponceTime: incomingRoom.hostResponceTime,
     bedType: incomingRoom.bedType,
@@ -25,7 +21,7 @@ const saveRooms = (incomingRoom) => {
     airDescrip: incomingRoom.airDescrip,
     petDescrip: incomingRoom.petDescrip,
     breakfastDescrip: incomingRoom.breakfastDescrip,
-    roomDescription: incomingRoom.description,
+    roomDescription: incomingRoom.roomDescription,
     spaceDescription: incomingRoom.spaceDescription,
     guestAccessDescription: incomingRoom.guestAccessDescription,
     interactionDescription: incomingRoom.interactionDescription,
@@ -56,7 +52,6 @@ const saveRooms = (incomingRoom) => {
     smokeDetector: incomingRoom.smokeDetector,
     hostVarified: incomingRoom.hostVarified,
   });
-
   fakeRoom.save((err, fakeroom) => {
     if (err) console.error(err);
     if (fakeroom) console.log('Saved Room: ', fakeroom.id);
