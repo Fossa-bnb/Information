@@ -58,8 +58,8 @@ const saveRooms = (incomingRoom) => {
   });
 
   fakeRoom.save((err, fakeroom) => {
-    if (err) return console.error(err);
-    if (fakeroom) return console.log('Saved Room: ', fakeroom.id);
+    if (err) console.error(err);
+    if (fakeroom) console.log('Saved Room: ', fakeroom.id);
   });
 };
 
