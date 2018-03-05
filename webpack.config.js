@@ -19,6 +19,9 @@ const config = {
       },
     ],
   },
+  resolve: {
+    extemtopms: ['.js', '.jsx'],
+  },
 };
 
 module.exports = config;
