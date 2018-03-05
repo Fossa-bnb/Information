@@ -20,7 +20,7 @@ const config = {
     ],
   },
   resolve: {
-    extemtopms: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
   },
 };
 

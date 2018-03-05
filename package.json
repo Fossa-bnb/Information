@@ -15,8 +15,12 @@
     "test:coverage": "jest --coverage"
   },
   "jest": {
-    "setupFiles": ["./src/jest-setup.js"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "setupFiles": [
+      "./src/jest-setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",
