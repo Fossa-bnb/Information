@@ -1,9 +1,9 @@
 import React from 'react';
-import numberViews from '../client/components/numberViews';
+import NumberViews from '../client/components/numberViews';
 
-describe('<numberViews /> Component', () => {
+describe('<NumberViews /> Component', () => {
   it('should render a div', () => {
-    const wrapper = shallow(<numberViews />);
+    const wrapper = shallow(<NumberViews />);
     expect(wrapper.is('div')).toEqual(true);
   });
 });
