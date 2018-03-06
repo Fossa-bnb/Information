@@ -10,6 +10,7 @@ describe('<Amenities /> Component', () => {
     const room = { wifi: true };
     const wrapper = shallow(<Amenities room={room} />);
     // need to figure out how to test this componit
+    console.log(wrapper.debug());
     expect(wrapper.find('li').text()).toEqual('Wifi');
   });
 });

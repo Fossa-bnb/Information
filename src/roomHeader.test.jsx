@@ -2,9 +2,9 @@ import React from 'react';
 import RoomHeader from '../client/app/components/RoomHeader';
 
 describe('<RoomHeader /> Component', () => {
-  it('should render a title', () => {
+  it('should render a div', () => {
     const wrapper = shallow(<RoomHeader room="" />);
-    expect(wrapper.is('h1')).toEqual(true);
+    expect(wrapper.is('div')).toEqual(true);
   });
   it('renders the room header li item given', () => {
     const room = { guests: 2 };

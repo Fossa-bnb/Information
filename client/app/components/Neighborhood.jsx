@@ -1,7 +1,9 @@
 import React from 'react';
 
-const Neighborhood = () => (
-  <div>Neighborhood Component</div>
+const Neighborhood = props => (
+  <div>
+    <p>{ props.room.neighborhood }</p>
+  </div>
 );
 
 export default Neighborhood;

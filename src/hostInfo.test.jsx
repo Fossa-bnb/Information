@@ -2,9 +2,9 @@ import React from 'react';
 import HostInfo from '../client/app/components/HostInfo';
 
 describe('<HostInfo /> Component', () => {
-  it('should render a title', () => {
+  it('should render a div', () => {
     const wrapper = shallow(<HostInfo room="" />);
-    expect(wrapper.is('h1')).toEqual(true);
+    expect(wrapper.is('div')).toEqual(true);
   });
   it('renders the host info paragraph given', () => {
     const room = { hostInfo: 'host info...' };
