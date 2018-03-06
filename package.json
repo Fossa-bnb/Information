@@ -8,6 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "seedDB": "node database/seedDB.js",
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon server/index.js"
   },
@@ -16,7 +17,9 @@
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "faker": "^4.1.0",
     "jquery": "^3.3.1",
+    "mongodb": "^3.0.4",
     "mongoose": "^5.0.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
