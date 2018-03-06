@@ -7,7 +7,7 @@ describe('<Neighborhood /> Component', () => {
     expect(wrapper.is('div')).toEqual(true);
   });
   it('renders the neighborhood description paragraph given', () => {
-    const neighborhood = 'neighborhood description...';
+    const neighborhood = { neighborhoodDescription: 'neighborhood description...' };
     const wrapper = shallow(<Neighborhood neighborhood={neighborhood} />);
     expect(wrapper.find('p').text()).toEqual('neighborhood description...');
   });

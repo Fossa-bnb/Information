@@ -2,7 +2,7 @@ import React from 'react';
 
 const Neighborhood = props => (
   <div>
-    <p>{ props.room.neighborhood }</p>
+    <p>{ props.neighborhood.neighborhoodDescription }</p>
   </div>
 );
 

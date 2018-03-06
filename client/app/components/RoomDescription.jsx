@@ -2,7 +2,7 @@ import React from 'react';
 
 const RoomDescription = props => (
   <div>
-    <p>{ props.room.roomDescription }</p>
+    <p>{ props.roomDescription }</p>
   </div>
 );
 

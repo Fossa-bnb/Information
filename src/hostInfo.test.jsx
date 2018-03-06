@@ -9,6 +9,6 @@ describe('<HostInfo /> Component', () => {
   it('renders the host info paragraph given', () => {
     const hostInfo = { hostDescription: 'host info' };
     const wrapper = shallow(<HostInfo hostInfo={hostInfo} />);
-    expect(wrapper.find('p').text()).toEqual('host info...');
+    expect(wrapper.find('p').text()).toEqual('host info');
   });
 });

@@ -2,7 +2,7 @@ import React from 'react';
 
 const HouseRules = props => (
   <div>
-    <p>{ props.room.houseRules }</p>
+    <p>{ props.houseRules }</p>
   </div>
 );
 

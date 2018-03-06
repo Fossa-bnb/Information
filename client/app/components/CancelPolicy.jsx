@@ -2,7 +2,7 @@ import React from 'react';
 
 const CancelPolicy = props => (
   <div>
-    <p>{props.room.cancelPolicy }</p>
+    <p>{props.cancelPolicy }</p>
   </div>
 );
 
