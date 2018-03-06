@@ -13,25 +13,25 @@ class App extends React.Component {
     super(props);
     this.state = {
       roomID: props.room.id,
-      roomObj: {}
+      room: {}
     };
   }
 
-  fetchRoom () {
+  fetchRoom (roomID) {
     this.setState({
-      roomID: props.room.id;
-    })
+      this.state.room =  {} // fill out later will use fetchRoom
+    });
   }
 
   render() {
     return (
       <div>
-        <RoomHeader room={room}/>
-        <HostImage room={room}/>
-        <RoomDescription room={room}/>
-        <Amenities room={room}/>
-        <HouseRules room={room}/>
-        <CancelPolicy room={room}/>
+        <RoomHeader room={room} />
+        <HostImage room={room} />
+        <RoomDescription room={room} />
+        <Amenities room={room} />
+        <HouseRules room={room} />
+        <CancelPolicy room={room} />
       </div>
     );
   }
