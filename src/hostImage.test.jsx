@@ -1,9 +1,9 @@
 import React from 'react';
-import HostImage from '../client/components/hostImage';
+import HostImage from '../client/app/components/HostImage';
 
 describe('<HostImage /> Component', () => {
-  it('should render a div', () => {
-    const wrapper = shallow(<HostImage />);
-    expect(wrapper.is('div')).toEqual(true);
+  it('should render hostImage', () => {
+    const wrapper = shallow(<HostImage room="" />);
+    expect(wrapper.is('img')).toEqual(true);
   });
 });

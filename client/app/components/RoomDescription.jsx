@@ -1,7 +1,9 @@
 import React from 'react';
 
-const RoomDescription = () => (
-  <div>RoomDescription Component</div>
+const RoomDescription = props => (
+  <div>
+    <p>{ props.roomDescription }</p>
+  </div>
 );
 
 export default RoomDescription;

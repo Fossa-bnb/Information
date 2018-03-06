@@ -1,7 +1,7 @@
 import React from 'react';
 
-const HostImage = () => (
-  <div>HostImage Component</div>
+const HostImage = props => (
+  <img src={props.room.hostImage} alt="HostImage" />
 );
 
 export default HostImage;

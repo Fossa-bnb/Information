@@ -1,5 +1,5 @@
 import React from 'react';
-import NumberViews from '../client/components/numberViews';
+import NumberViews from '../client/app/components/NumberViews';
 
 describe('<NumberViews /> Component', () => {
   it('should render a div', () => {
