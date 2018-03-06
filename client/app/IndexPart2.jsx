@@ -9,31 +9,32 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      roomID: this.props.roomID,
-      room: {}
+      room: {},
     };
   }
 
-  fetchRoom () {
+  fetchRoom() {
     const roomID = this.props.roomID;
     $.ajax({
       url: `/${roomID}`,
       method: 'GET',
-      
-    })
-
-
-
-    this.setState({
-      room: roomObj
+      success: ({ roomObj }) => {
+        console.log(`SUCCESS - GET roomObj: ${roomObj.id}`);
+        this.setState({
+          room: roomObj,
+        });
+      },
+      error: (err) => {
+        console.log(`ERROR - Bad GET: ${err}`);
+      },
     });
   }
 
   render() {
     return (
     <div>
-      <HostInfo room={room} />
-      <Neighborhood room={room} />
+      <HostInfo room={this.state.room} />
+      <Neighborhood room={this.state.room} />
     </div>
     )
   }
