@@ -3,7 +3,7 @@ import HostInfo from '../client/app/components/HostInfo';
 
 describe('<HostInfo /> Component', () => {
   it('should render a title', () => {
-    const wrapper = shallow(<HostInfo />);
+    const wrapper = shallow(<HostInfo room="" />);
     expect(wrapper.is('h1')).toEqual(true);
   });
   it('renders the host info paragraph given', () => {
