@@ -1,5 +1,6 @@
 import React from 'react';
 import RenderDOM from 'react-dom';
+import $ from 'jquery';
 import HostInfo from './components/HostInfo';
 import Neighborhood from './components/Neighborhood';
 
@@ -8,14 +9,23 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      roomID: props.room.id,
+      roomID: this.props.roomID,
       room: {}
     };
   }
 
-  fetchRoom (roomID) {
+  fetchRoom () {
+    const roomID = this.props.roomID;
+    $.ajax({
+      url: `/${roomID}`,
+      method: 'GET',
+      
+    })
+
+
+
     this.setState({
-      this.state.room =  {} // will fix to do a fetch request to get this object
+      room: roomObj
     });
   }
 
@@ -29,4 +39,4 @@ class App extends React.Component {
   }
 };
 
-RenderDOM.render(<App roomId={{ id: 1 }} />, document.getElementById('app2'));
+RenderDOM.render(<App roomID={{ id: 1 }} />, document.getElementById('app2'));
