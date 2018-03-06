@@ -59,6 +59,7 @@ class App extends React.Component {
     const roomHeader = {
       title: this.props.room.title,
       city: this.props.room.city,
+      roomType: this.props.room.roomType,
       rooms: this.props.room.rooms,
       bed: this.props.room.bed,
       bath: this.props.room.bath,
