@@ -16,7 +16,7 @@ class App extends React.Component {
     };
   }
 
-  fetchRoom() {
+  componentDidMount() {
     const roomID = this.props.roomID;
     $.ajax({
       url: `/${roomID}`,
