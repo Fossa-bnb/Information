@@ -15,7 +15,7 @@ class App extends React.Component {
 
   fetchRoom (roomID) {
     this.setState({
-      this.state.room: {} // will fix to do a fetch request to get this object
+      this.state.room =  {} // will fix to do a fetch request to get this object
     });
   }
 
