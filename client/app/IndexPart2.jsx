@@ -32,19 +32,19 @@ class App extends React.Component {
 
   render() {
     const hostInfo = {
-      location: this.state.room.hostLocation,
-      name: this.state.room.hostName,
-      dateJoined: this.state.room.hostDateJoined,
-      email: this.state.room.hostEmail,
-      language: this.state.room.hostLanguage,
-      responceTime: this.state.room.hostResponceTime,
-      description: this.state.room.hostDescription,
-      reviews: this.state.room.hostReviews,
-      responceRate: this.state.room.hostResponceRate,
-      varified: this.state.room.hostVarified,
+      hostLocation: this.state.room.hostLocation,
+      hostName: this.state.room.hostName,
+      hostDateJoined: this.state.room.hostDateJoined,
+      hostEmail: this.state.room.hostEmail,
+      hostLanguage: this.state.room.hostLanguage,
+      hostResponceTime: this.state.room.hostResponceTime,
+      hostDescription: this.state.room.hostDescription,
+      hostReviews: this.state.room.hostReviews,
+      hostResponceRate: this.state.room.hostResponceRate,
+      hostVarified: this.state.room.hostVarified,
     };
     const neighborhood = {
-      description: this.state.room.neighborhoodDescription,
+      neighborhoodDescription: this.state.room.neighborhoodDescription,
       mapUrl: this.state.room.mapUrl,
     };
     return (
