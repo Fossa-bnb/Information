@@ -3,7 +3,7 @@ import RoomDescription from '../client/app/components/RoomDescription';
 
 describe('<RoomDescription /> Component', () => {
   it('should render a div ', () => {
-    const wrapper = shallow(<RoomDescription />);
+    const wrapper = shallow(<RoomDescription room="" />);
     expect(wrapper.is('div')).toEqual(true);
   });
   it('renders the room description paragraph given', () => {
