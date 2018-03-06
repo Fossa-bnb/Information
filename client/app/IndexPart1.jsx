@@ -12,8 +12,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      roomID: this.props.roomID,
-      room: {}
+      room: {},
     };
   }
 
@@ -36,16 +35,14 @@ class App extends React.Component {
 
 
   render() {
-    const newRoom = fetchDB(this.state.roomID, this.fetchRoom.bind(this));
-
     return (
       <div>
-        <RoomHeader room={newRoom} />
-        <HostImage room={newRoom} />
-        <RoomDescription room={newRoom} />
-        <Amenities room={newRoom} />
-        <HouseRules room={newRoom} />
-        <CancelPolicy room={newRoom} />
+        <RoomHeader room={this.state.room} />
+        <HostImage room={this.state.room} />
+        <RoomDescription room={this.state.room} />
+        <Amenities room={this.state.room} />
+        <HouseRules room={this.state.room} />
+        <CancelPolicy room={this.state.room} />
       </div>
     );
   }
