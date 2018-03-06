@@ -1,9 +1,15 @@
 import React from 'react';
-import CancelPolicy from '../client/components/cancelPolicy';
+import CancelPolicy from '../client/app/components/CancelPolicy';
 
 describe('<CancelPolicy /> Component', () => {
   it('should render a div', () => {
-    const wrapper = shallow(<CancelPolicy />);
+    const wrapper = shallow(<CancelPolicy room="" />);
     expect(wrapper.is('div')).toEqual(true);
+  });
+  it('renders the Cancel Policy paragraph given', () => {
+    const room = { cancelPolicy: 'Cancel Policy is...' };
+    const wrapper = shallow(<CancelPolicy room={room} />);
+    // need to figure out how to test this componit
+    expect(wrapper.find('p').text()).toEqual('Cancel Policy is...');
   });
 });
