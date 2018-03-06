@@ -3,13 +3,13 @@ import Amenities from '../client/app/components/Amenities';
 
 describe('<Amenities /> Component', () => {
   it('should render a div', () => {
-    const wrapper = shallow(<Amenities rooms="" />);
+    const wrapper = shallow(<Amenities amenities="" />);
     expect(wrapper.is('div')).toEqual(true);
   });
-  it('renders the amenity li item given', () => {
-    const room = { wifi: true };
-    const wrapper = shallow(<Amenities room={room} />);
-    // need to figure out how to test this componit
+  it('renders the amenity wifi list item', () => {
+    const amenities = { wifi: true, tv: false };
+    const wrapper = shallow(<Amenities amenities={amenities} />);
+    // this may be temporary
     console.log(wrapper.debug());
     expect(wrapper.find('li').text()).toEqual('Wifi');
   });
