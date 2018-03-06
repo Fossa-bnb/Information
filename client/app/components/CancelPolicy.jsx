@@ -1,7 +1,9 @@
 import React from 'react';
 
-const CancelPolicy = () => (
-  <div>CancelPolicy Component</div>
+const CancelPolicy = props => (
+  <div>
+    <p>{props.room.cancelPolicy }</p>
+  </div>
 );
 
 export default CancelPolicy;
