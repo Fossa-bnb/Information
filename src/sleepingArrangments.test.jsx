@@ -1,5 +1,5 @@
 import React from 'react';
-import SleepingArrangments from '../client/components/sleepingArrangments';
+import SleepingArrangments from '../client/app/components/SleepingArrangments';
 
 describe('<SleepingArrangments /> Component', () => {
   it('should render a div', () => {
