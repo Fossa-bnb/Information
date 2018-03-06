@@ -32,12 +32,13 @@ class App extends React.Component {
 
   render() {
     return (
-    <div>
-      <HostInfo room={this.state.room} />
-      <Neighborhood room={this.state.room} />
-    </div>
-    )
+      <div>
+        <HostInfo room={this.state.room} />
+        <Neighborhood room={this.state.room} />
+      </div>
+    );
   }
-};
+}
+
 
 RenderDOM.render(<App roomID={{ id: 1 }} />, document.getElementById('app2'));
