@@ -9,7 +9,6 @@ describe('<HouseRules /> Component', () => {
   it('renders the house rules paragraph given', () => {
     const room = { houseRules: 'House rules are...' };
     const wrapper = shallow(<HouseRules room={room} />);
-    // need to figure out how to test this componit
     expect(wrapper.find('p').text()).toEqual('House rules are...');
   });
 });

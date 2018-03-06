@@ -9,7 +9,6 @@ describe('<Neighborhood /> Component', () => {
   it('renders the neighborhood description paragraph given', () => {
     const room = { neighborhood: 'neighborhood description...' };
     const wrapper = shallow(<Neighborhood room={room} />);
-    // need to figure out how to test this componit
     expect(wrapper.find('p').text()).toEqual('neighborhood description...');
   });
 });
