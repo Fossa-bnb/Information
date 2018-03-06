@@ -1,9 +1,9 @@
 import React from 'react';
-import CanclePolicy from '../client/components/cancelPolicy';
+import CancelPolicy from '../client/components/cancelPolicy';
 
-describe('<CanclePolicy /> Component', () => {
+describe('<CancelPolicy /> Component', () => {
   it('should render a div', () => {
-    const wrapper = shallow(<CanclePolicy />);
+    const wrapper = shallow(<CancelPolicy />);
     expect(wrapper.is('div')).toEqual(true);
   });
 });
