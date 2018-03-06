@@ -1,6 +1,6 @@
 import React from 'react';
 import RenderDOM from 'react-dom';
-import Amenites from './components/Amenities';
+import Amenities from './components/Amenities';
 import CancelPolicy from './components/CancelPolicy';
 import HostImage from './components/HostImage';
 import HouseRules from './components/HouseRules';
@@ -14,7 +14,7 @@ const App = () => (
     <RoomHeader />
     <HostImage />
     <RoomDescription />
-    <Amenites />
+    <Amenities />
     <SleepingArrangments />
     <HouseRules />
     <CancelPolicy />
