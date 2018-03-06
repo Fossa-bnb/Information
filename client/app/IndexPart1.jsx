@@ -12,13 +12,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      roomID: props.room.id,
+      roomID: this.props.roomID,
       room: {}
     };
   }
 
   fetchRoom() {
-    const roomID = this.props.id;
+    const roomID = this.props.roomID;
     $.ajax({
       url: `/${roomID}`,
       method: 'GET',
