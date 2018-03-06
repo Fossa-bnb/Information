@@ -8,17 +8,33 @@ import RoomDescription from './components/RoomDescription';
 import RoomHeader from './components/RoomHeader';
 import SleepingArrangments from './components/SleepingArrangments';
 
-const App = () => (
-  <div>
-    <h1>My Room</h1>
-    <RoomHeader />
-    <HostImage />
-    <RoomDescription />
-    <Amenities />
-    <SleepingArrangments />
-    <HouseRules />
-    <CancelPolicy />
-  </div>
-);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      roomID: props.room.id,
+      roomObj: {}
+    };
+  }
 
-RenderDOM.render(<App />, document.getElementById('app'));
+  fetchRoom () {
+    this.setState({
+      roomID: props.room.id;
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <RoomHeader room={room}/>
+        <HostImage room={room}/>
+        <RoomDescription room={room}/>
+        <Amenities room={room}/>
+        <HouseRules room={room}/>
+        <CancelPolicy room={room}/>
+      </div>
+    );
+  }
+}
+
+RenderDOM.render(<App roomID={{id: 1}} />, document.getElementById('app'));
