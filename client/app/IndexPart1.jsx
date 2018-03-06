@@ -6,7 +6,7 @@ import HostImage from './components/HostImage';
 import HouseRules from './components/HouseRules';
 import RoomDescription from './components/RoomDescription';
 import RoomHeader from './components/RoomHeader';
-import SleepingArrangments from './components/SleepingArrangments';
+import fetchDB from '../database/fetchRoom';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,24 +17,27 @@ class App extends React.Component {
     };
   }
 
-  fetchRoom (roomID) {
+  fetchRoom(roomObj) {
     this.setState({
-      this.state.room =  {} // fill out later will use fetchRoom
+      room: roomObj,
     });
   }
 
+
   render() {
+    const newRoom = fetchDB(this.state.roomID, this.fetchRoom.bind(this));
+
     return (
       <div>
-        <RoomHeader room={room} />
-        <HostImage room={room} />
-        <RoomDescription room={room} />
-        <Amenities room={room} />
-        <HouseRules room={room} />
-        <CancelPolicy room={room} />
+        <RoomHeader room={newRoom} />
+        <HostImage room={newRoom} />
+        <RoomDescription room={newRoom} />
+        <Amenities room={newRoom} />
+        <HouseRules room={newRoom} />
+        <CancelPolicy room={newRoom} />
       </div>
     );
   }
 }
 
-RenderDOM.render(<App roomID={{id: 1}} />, document.getElementById('app'));
+RenderDOM.render(<App roomID={{ id: 1 }} />, document.getElementById('app'));
