@@ -31,10 +31,26 @@ class App extends React.Component {
   }
 
   render() {
+    const hostInfo = {
+      location: this.state.room.hostLocation,
+      name: this.state.room.hostName,
+      dateJoined: this.state.room.hostDateJoined,
+      email: this.state.room.hostEmail,
+      language: this.state.room.hostLanguage,
+      responceTime: this.state.room.hostResponceTime,
+      description: this.state.room.hostDescription,
+      reviews: this.state.room.hostReviews,
+      responceRate: this.state.room.hostResponceRate,
+      varified: this.state.room.hostVarified,
+    };
+    const neighborhood = {
+      description: this.state.room.neighborhoodDescription,
+      mapUrl: this.state.room.mapUrl,
+    };
     return (
       <div>
-        <HostInfo room={this.state.room} />
-        <Neighborhood room={this.state.room} />
+        <HostInfo hostInfo={hostInfo} />
+        <Neighborhood neighborhood={neighborhood} />
       </div>
     );
   }
