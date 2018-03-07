@@ -5,7 +5,7 @@ const HostInfo = (props) => {
   return (
     <div>
       <h2>{ `Hosted by ${props.hostInfo.hostName}` }</h2>
-      <div>{ `${props.hostInfo.hostLocation} · ${props.hostInfo.hostDateJoind}` }</div>
+      <div>{ `${props.hostInfo.hostLocation} · ${props.hostInfo.hostDateJoined}` }</div>
       <div>{`* ${props.hostInfo.hostReviews} Reviews   >${varified}`}</div>
       <hr />
       <p>{ props.hostInfo.hostDescription }</p>
