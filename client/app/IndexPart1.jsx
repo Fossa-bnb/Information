@@ -79,7 +79,7 @@ class App extends React.Component {
         <HostImage hostImage={this.state.room.hostImageUrl} />
         <RoomDescription roomInfo={roomInfo} />
         <Amenities amenities={amenities} />
-        <HouseRules houseRules={this.state.room.houseRules} />
+        <HouseRules houseRules={this.state.room.houseRulesDescription} />
         <CancelPolicy cancelPolicy={this.state.room.canclePolicyDescription} />
       </div>
     );
