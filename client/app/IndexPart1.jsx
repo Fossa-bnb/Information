@@ -64,6 +64,7 @@ class App extends React.Component {
       bed: this.state.room.bed,
       bath: this.state.room.bath,
       guest: this.state.room.guest,
+      bedType: this.state.room.bedType,
     };
     const roomInfo = {
       roomDescription: this.state.room.roomDescription,
