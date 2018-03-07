@@ -14,18 +14,18 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const roomID = this.props.roomID;
+    const roomID = this.props.id;
     $.ajax({
       url: `/${roomID}`,
       method: 'GET',
-      success: ({ roomObj }) => {
-        console.log(`SUCCESS - GET roomObj: ${roomObj.id}`);
+      success: (roomObj) => {
+        console.log(`SUCCESS - GET roomObj Part2: ${roomObj[0]}`);
         this.setState({
-          room: roomObj,
+          room: roomObj[0],
         });
       },
       error: (err) => {
-        console.log(`ERROR - Bad GET: ${err}`);
+        console.log(`ERROR - Bad GET Part2: ${err}`);
       },
     });
   }
@@ -57,4 +57,4 @@ class App extends React.Component {
 }
 
 
-RenderDOM.render(<App roomID={{ id: 1 }} />, document.getElementById('app2'));
+RenderDOM.render(<App id={1} />, document.getElementById('app2'));

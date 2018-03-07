@@ -8,8 +8,8 @@ App.use(bodyParser.json());
 
 App.use(express.static(`${__dirname}/../client`));
 
-App.get('/:roomID', (req, res) => {
-  fetchRoom(req.params.roomID, (err, room) => {
+App.get('/:id', (req, res) => {
+  fetchRoom(req.params.id, (err, room) => {
     if (err) {
       console.log(`ERROR - fetching room: ${err}`);
     } else {
