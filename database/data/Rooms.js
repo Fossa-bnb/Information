@@ -15,7 +15,7 @@ for (let i = 1; i < 101; i += 1) {
     mapUrl: faker.image.city(),
     roomType: faker.company.catchPhraseDescriptor(),
     hostLanguage: faker.lorem.word(),
-    hostResponceTime: faker.company.bsAdjective(),
+    hostResponseTime: faker.company.bsAdjective(),
     bedType: faker.company.catchPhraseDescriptor(),
     essDescrip: faker.lorem.sentence(5),
     heatDescrip: faker.lorem.sentence(4),
@@ -36,7 +36,7 @@ for (let i = 1; i < 101; i += 1) {
     bath: faker.random.number({ min: 1, max: 50 }),
     guest: faker.random.number({ min: 1, max: 100 }),
     hostReviews: faker.random.number({ min: 1, max: 10000 }),
-    hostResponceRate: faker.random.number({ min: 1, max: 100 }),
+    hostResponseRate: faker.random.number({ min: 1, max: 100 }),
     essentials: faker.random.boolean(),
     wifi: faker.random.boolean(),
     shampoo: faker.random.boolean(),
@@ -51,7 +51,7 @@ for (let i = 1; i < 101; i += 1) {
     firstAid: faker.random.boolean(),
     fireExtinguisher: faker.random.boolean(),
     smokeDetector: faker.random.boolean(),
-    hostVarified: faker.random.boolean(),
+    hostVerified: faker.random.boolean(),
   });
 }
 

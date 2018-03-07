@@ -20,7 +20,7 @@ const roomSchema = mongoose.Schema({
   mapUrl: String,
   roomType: String,
   hostLanguage: String,
-  hostResponceTime: String,
+  hostResponseTime: String,
   bedType: String,
   bedArea: String,
   essDescrip: String,
@@ -42,7 +42,7 @@ const roomSchema = mongoose.Schema({
   bath: Number,
   guest: Number,
   hostReviews: Number,
-  hostResponceRate: Number,
+  hostResponseRate: Number,
   essentials: Boolean,
   wifi: Boolean,
   shampoo: Boolean,
@@ -57,7 +57,7 @@ const roomSchema = mongoose.Schema({
   firstAid: Boolean,
   fireExtinguisher: Boolean,
   smokeDetector: Boolean,
-  hostVarified: Boolean,
+  hostVerified: Boolean,
 });
 
 const Room = mongoose.model('Room', roomSchema);

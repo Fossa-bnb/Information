@@ -36,11 +36,11 @@ class App extends React.Component {
       hostName: this.state.room.hostName,
       hostDateJoined: this.state.room.hostDateJoined,
       hostLanguage: this.state.room.hostLanguage,
-      hostResponceTime: this.state.room.hostResponceTime,
+      hostResponseTime: this.state.room.hostResponseTime,
       hostDescription: this.state.room.hostDescription,
       hostReviews: this.state.room.hostReviews,
-      hostResponceRate: this.state.room.hostResponceRate,
-      hostVarified: this.state.room.hostVarified,
+      hostResponseRate: this.state.room.hostResponseRate,
+      hostVerified: this.state.room.hostVerified,
       hostWarning: this.state.room.hostWarning,
     };
     const neighborhood = {

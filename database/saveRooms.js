@@ -13,7 +13,7 @@ const saveRooms = (incomingRoom) => {
     mapUrl: incomingRoom.mapUrl,
     roomType: incomingRoom.roomType,
     hostLanguage: incomingRoom.hostLanguage,
-    hostResponceTime: incomingRoom.hostResponceTime,
+    hostResponseTime: incomingRoom.hostResponceTime,
     bedType: incomingRoom.bedType,
     bedArea: incomingRoom.bedArea,
     essDescrip: incomingRoom.essDescrip,
@@ -35,7 +35,7 @@ const saveRooms = (incomingRoom) => {
     bath: incomingRoom.bath,
     guest: incomingRoom.guest,
     hostReviews: incomingRoom.hostReviews,
-    hostResponceRate: incomingRoom.hostResponceRate,
+    hostResponseRate: incomingRoom.hostResponceRate,
     essentials: incomingRoom.essentials,
     wifi: incomingRoom.wifi,
     shampoo: incomingRoom.shampoo,
@@ -50,7 +50,7 @@ const saveRooms = (incomingRoom) => {
     firstAid: incomingRoom.firstAid,
     fireExtinguisher: incomingRoom.fireExtinguisher,
     smokeDetector: incomingRoom.smokeDetector,
-    hostVarified: incomingRoom.hostVarified,
+    hostVerified: incomingRoom.hostVarified,
   });
   fakeRoom.save((err, fakeroom) => {
     if (err) console.error(err);
