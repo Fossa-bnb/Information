@@ -17,18 +17,18 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const roomID = this.props.roomID;
+    const roomID = this.props.id;
     $.ajax({
       url: `/${roomID}`,
       method: 'GET',
-      success: ({ roomObj }) => {
-        console.log(`SUCCESS - GET roomObj: ${roomObj.id}`);
+      success: (roomObj) => {
+        console.log(`SUCCESS - GET roomObj Part1: ${roomObj[0]}`);
         this.setState({
-          room: roomObj,
+          room: roomObj[0],
         });
       },
       error: (err) => {
-        console.log(`ERROR - Bad GET: ${err}`);
+        console.log(`ERROR - Bad GET Part1: ${err}`);
       },
     });
   }
@@ -36,53 +36,52 @@ class App extends React.Component {
 
   render() {
     const amenities = {
-      essDescrip: this.props.room.essDescrip,
-      heatDescrip: this.props.room.heatDescrip,
-      airDescrip: this.props.room.airDescrip,
-      petDescrip: this.props.room.petDescrip,
-      breakfastDescrip: this.props.room.breakfastDescrip,
-      essentials: this.props.room.essentials,
-      wifi: this.props.room.wifi,
-      shampoo: this.props.room.shampoo,
-      closetDrawers: this.props.room.closetDrawers,
-      tv: this.props.room.tv,
-      heating: this.props.room.heating,
-      airConditioning: this.props.room.airConditioning,
-      breakfast: this.props.room.breakfast,
-      deskWorkspace: this.props.room.deskWorkspace,
-      petFriendly: this.props.room.petFriendly,
-      carbonDetector: this.props.room.carbonDetector,
-      firstAid: this.props.room.firstAid,
-      fireExtinguisher: this.props.room.fireExtinguisher,
-      smokeDetector: this.props.room.smokeDetector,
+      amenitiesList: [
+        ['Essentials', this.state.room.essentials, this.state.room.essDescrip],
+        ['Wifi', this.state.room.wifi],
+        ['Shampoo', this.state.room.shampoo],
+        ['Closet/Drawers', this.state.room.closetDrawers],
+        ['TV', this.state.room.tv],
+        ['Heating', this.state.room.heating, this.state.room.heatDescrip],
+        ['Air Conditioning',this.state.room.airConditioning, this.state.room.airDescrip],
+        ['Breakfast', this.state.room.breakfast, this.state.room.breakfastDescrip],
+        ['Desk/Workspace', this.state.room.deskWorkspace],
+        ['Pet Friendly', this.state.room.petFriendly, this.state.room.petDescrip],
+        ['Carbon Detector', this.state.room.carbonDetector],
+        ['First Aid', this.state.room.firstAid],
+        ['Fire Extinguisher', this.state.room.fireExtinguisher],
+        ['Smoke Detector', this.state.room.smokeDetector],
+      ],
     };
     const roomHeader = {
-      title: this.props.room.title,
-      city: this.props.room.city,
-      roomType: this.props.room.roomType,
-      rooms: this.props.room.rooms,
-      bed: this.props.room.bed,
-      bath: this.props.room.bath,
-      guest: this.props.room.guest,
+      title: this.state.room.title,
+      city: this.state.room.city,
+      roomType: this.state.room.roomType,
+      room: this.state.room.room,
+      bed: this.state.room.bed,
+      bath: this.state.room.bath,
+      guest: this.state.room.guest,
+      bedType: this.state.room.bedType,
     };
     const roomInfo = {
-      roomDescription: this.props.room.roomDescription,
-      spaceDescription: this.props.room.spaceDescription,
-      guestAccessDescription: this.props.room.guestAccessDescription,
-      interactionDescription: this.props.room.interactionDescription,
-      otherDescription: this.props.room.otherDescription,
+      roomDescription: this.state.room.roomDescription,
+      spaceDescription: this.state.room.spaceDescription,
+      guestAccessDescription: this.state.room.guestAccessDescription,
+      interactionDescription: this.state.room.interactionDescription,
+      otherDescription: this.state.room.otherDescription,
     };
+
     return (
       <div>
         <RoomHeader roomHeader={roomHeader} />
-        <HostImage hostImage={this.state.room.hostImage} />
+        <HostImage hostImage={this.state.room.hostImageUrl} />
         <RoomDescription roomInfo={roomInfo} />
         <Amenities amenities={amenities} />
-        <HouseRules houseRules={this.state.room.houseRules || ''} />
-        <CancelPolicy cancelPolicy={this.state.room.cancelPolicy || ''} />
+        <HouseRules houseRules={this.state.room.houseRulesDescription} />
+        <CancelPolicy cancelPolicy={this.state.room.cancelPolicyDescription} />
       </div>
     );
   }
 }
 
-RenderDOM.render(<App roomID={{ id: 1 }} />, document.getElementById('app'));
+RenderDOM.render(<App id={4} />, document.getElementById('app'));

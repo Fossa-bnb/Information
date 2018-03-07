@@ -3,7 +3,7 @@ import RenderDOM from 'react-dom';
 import $ from 'jquery';
 import HostInfo from './components/HostInfo';
 import Neighborhood from './components/Neighborhood';
-
+import HostImage from './components/HostImage';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,18 +14,18 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const roomID = this.props.roomID;
+    const roomID = this.props.id;
     $.ajax({
       url: `/${roomID}`,
       method: 'GET',
-      success: ({ roomObj }) => {
-        console.log(`SUCCESS - GET roomObj: ${roomObj.id}`);
+      success: (roomObj) => {
+        console.log(`SUCCESS - GET roomObj Part2: ${roomObj[0]}`);
         this.setState({
-          room: roomObj,
+          room: roomObj[0],
         });
       },
       error: (err) => {
-        console.log(`ERROR - Bad GET: ${err}`);
+        console.log(`ERROR - Bad GET Part2: ${err}`);
       },
     });
   }
@@ -35,13 +35,13 @@ class App extends React.Component {
       hostLocation: this.state.room.hostLocation,
       hostName: this.state.room.hostName,
       hostDateJoined: this.state.room.hostDateJoined,
-      hostEmail: this.state.room.hostEmail,
       hostLanguage: this.state.room.hostLanguage,
-      hostResponceTime: this.state.room.hostResponceTime,
+      hostResponseTime: this.state.room.hostResponseTime,
       hostDescription: this.state.room.hostDescription,
       hostReviews: this.state.room.hostReviews,
-      hostResponceRate: this.state.room.hostResponceRate,
-      hostVarified: this.state.room.hostVarified,
+      hostResponseRate: this.state.room.hostResponseRate,
+      hostVerified: this.state.room.hostVerified,
+      hostWarning: this.state.room.hostWarning,
     };
     const neighborhood = {
       neighborhoodDescription: this.state.room.neighborhoodDescription,
@@ -50,6 +50,7 @@ class App extends React.Component {
     return (
       <div>
         <HostInfo hostInfo={hostInfo} />
+        <HostImage hostImage={this.state.room.hostImageUrl} />
         <Neighborhood neighborhood={neighborhood} />
       </div>
     );
@@ -57,4 +58,4 @@ class App extends React.Component {
 }
 
 
-RenderDOM.render(<App roomID={{ id: 1 }} />, document.getElementById('app2'));
+RenderDOM.render(<App id={4} />, document.getElementById('app2'));
