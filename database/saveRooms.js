@@ -57,7 +57,7 @@ const saveRooms = (incomingRoom) => {
     firstAid: incomingRoom.firstAid,
     fireExtinguisher: incomingRoom.fireExtinguisher,
     smokeDetector: incomingRoom.smokeDetector,
-    hostVerified: incomingRoom.hostVarified,
+    hostVerified: incomingRoom.hostVerified,
   });
 
   // const saveRoomAsync = (room2Save) => {
