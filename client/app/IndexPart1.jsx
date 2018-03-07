@@ -85,3 +85,5 @@ class App extends React.Component {
 }
 
 RenderDOM.render(<App id={4} />, document.getElementById('app'));
+
+window.InfoPart1 = App;
