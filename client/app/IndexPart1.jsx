@@ -80,7 +80,7 @@ class App extends React.Component {
         <RoomDescription roomInfo={roomInfo} />
         <Amenities amenities={amenities} />
         <HouseRules houseRules={this.state.room.houseRules} />
-        <CancelPolicy cancelPolicy={this.state.room.cancelPolicy} />
+        <CancelPolicy cancelPolicy={this.state.room.canclePolicyDescription} />
       </div>
     );
   }
