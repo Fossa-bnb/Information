@@ -3,7 +3,7 @@ import RenderDOM from 'react-dom';
 import $ from 'jquery';
 import HostInfo from './components/HostInfo';
 import Neighborhood from './components/Neighborhood';
-
+import HostImage from './components/HostImage';
 
 class App extends React.Component {
   constructor(props) {
@@ -34,8 +34,7 @@ class App extends React.Component {
     const hostInfo = {
       hostLocation: this.state.room.hostLocation,
       hostName: this.state.room.hostName,
-      hostDateJoined: this.state.room.hostDateJoined,
-      hostEmail: this.state.room.hostEmail,
+      hostDateJoind: this.state.room.hostDateJoind,
       hostLanguage: this.state.room.hostLanguage,
       hostResponceTime: this.state.room.hostResponceTime,
       hostDescription: this.state.room.hostDescription,
@@ -50,6 +49,7 @@ class App extends React.Component {
     return (
       <div>
         <HostInfo hostInfo={hostInfo} />
+        <HostImage hostImage={this.state.room.hostImageUrl} />
         <Neighborhood neighborhood={neighborhood} />
       </div>
     );
@@ -57,4 +57,4 @@ class App extends React.Component {
 }
 
 
-RenderDOM.render(<App id={1} />, document.getElementById('app2'));
+RenderDOM.render(<App id={4} />, document.getElementById('app2'));
