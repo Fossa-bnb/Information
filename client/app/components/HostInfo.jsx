@@ -16,6 +16,9 @@ const HostInfo = (props) => {
       <div>Response time:</div>
       <div className="hostStats"> {`   ${props.hostInfo.hostResponceTime}`}</div>
       <hr />
+      <div className="hostStats">Always communicate through Airbnb · </div>
+      <div>{ props.hostInfo.hostWarning }</div>
+      <hr />
     </div>
 
   );
