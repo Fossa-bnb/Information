@@ -41,6 +41,7 @@ class App extends React.Component {
       hostReviews: this.state.room.hostReviews,
       hostResponceRate: this.state.room.hostResponceRate,
       hostVarified: this.state.room.hostVarified,
+      hostWarning: this.state.room.hostWarning,
     };
     const neighborhood = {
       neighborhoodDescription: this.state.room.neighborhoodDescription,
