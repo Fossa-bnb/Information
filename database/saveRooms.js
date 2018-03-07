@@ -1,6 +1,13 @@
 const Room = require('./roomSchema.js');
+// const Promise = require('bluebird');
 
 const saveRooms = (incomingRoom) => {
+  Room.remove({}, (err) => {
+    if (err) {
+      console.log('ERROR - Bad db remove: ', err);
+    }
+  });
+
   const fakeRoom = new Room({
     id: incomingRoom.id,
     title: incomingRoom.title,
@@ -52,6 +59,19 @@ const saveRooms = (incomingRoom) => {
     smokeDetector: incomingRoom.smokeDetector,
     hostVarified: incomingRoom.hostVarified,
   });
+
+  // const saveRoomAsync = (room2Save) => {
+  //   return new Promise((resolve, reject) => {
+  //     room2Save.save((err) => {
+  //       if (err) reject(err);
+  //       else resolve();
+  //     });
+  //   });
+  // };
+
+  // saveRoomAsync(fakeRoom);
+
+
   fakeRoom.save((err, fakeroom) => {
     if (err) console.error(err);
     if (fakeroom) console.log('Saved Room: ', fakeroom.id);
