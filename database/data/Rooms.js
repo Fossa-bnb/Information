@@ -14,7 +14,7 @@ for (let i = 1; i < 101; i += 1) {
     hostImageUrl: faker.image.avatar(),
     mapUrl: faker.image.city(),
     roomType: faker.company.catchPhraseDescriptor(),
-    hostLanguage: faker.lorem.word(2),
+    hostLanguage: faker.lorem.word(),
     hostResponceTime: faker.company.bsAdjective(),
     bedType: faker.company.catchPhraseDescriptor(),
     essDescrip: faker.lorem.sentence(5),

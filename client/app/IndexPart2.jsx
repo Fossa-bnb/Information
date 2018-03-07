@@ -34,7 +34,7 @@ class App extends React.Component {
     const hostInfo = {
       hostLocation: this.state.room.hostLocation,
       hostName: this.state.room.hostName,
-      hostDateJoind: this.state.room.hostDateJoind,
+      hostDateJoined: this.state.room.hostDateJoined,
       hostLanguage: this.state.room.hostLanguage,
       hostResponceTime: this.state.room.hostResponceTime,
       hostDescription: this.state.room.hostDescription,

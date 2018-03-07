@@ -57,7 +57,7 @@ class App extends React.Component {
       title: this.state.room.title,
       city: this.state.room.city,
       roomType: this.state.room.roomType,
-      rooms: this.state.room.rooms,
+      room: this.state.room.room,
       bed: this.state.room.bed,
       bath: this.state.room.bath,
       guest: this.state.room.guest,
@@ -78,7 +78,7 @@ class App extends React.Component {
         <RoomDescription roomInfo={roomInfo} />
         <Amenities amenities={amenities} />
         <HouseRules houseRules={this.state.room.houseRulesDescription} />
-        <CancelPolicy cancelPolicy={this.state.room.canclePolicyDescription} />
+        <CancelPolicy cancelPolicy={this.state.room.cancelPolicyDescription} />
       </div>
     );
   }
