@@ -9,10 +9,14 @@ const Amenities = (props) => {
       <div>
         {
           amenitiesArray.map((amenity) => {
-            if (amenity[1] === true) {
-              return <li>{ amenity[0] } </li>;
+            let title = '';
+            if (amenity[2] !== undefined) {
+              title = amenity[2];
             }
-              return <li><s> { amenity[0] } </s> </li>;
+            if (amenity[1] === true) {
+              return <li title={title}>{ amenity[0] } </li>;
+            }
+            return <li title={title}><s> { amenity[0] } </s> </li>;
           })
         }
       </div>

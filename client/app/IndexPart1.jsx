@@ -36,22 +36,17 @@ class App extends React.Component {
 
   render() {
     const amenities = {
-      essDescrip: this.state.room.essDescrip,
-      heatDescrip: this.state.room.heatDescrip,
-      airDescrip: this.state.room.airDescrip,
-      petDescrip: this.state.room.petDescrip,
-      breakfastDescrip: this.state.room.breakfastDescrip,
-      essentials: this.state.room.essentials,
       amenitiesList: [
+        ['Essentials', this.state.room.essentials, this.state.room.essDescrip],
         ['Wifi', this.state.room.wifi],
         ['Shampoo', this.state.room.shampoo],
         ['Closet/Drawers', this.state.room.closetDrawers],
         ['TV', this.state.room.tv],
-        ['Heating', this.state.room.heating],
-        ['Air Conditioning',this.state.room.airConditioning],
-        ['Breakfast', this.state.room.breakfast],
+        ['Heating', this.state.room.heating, this.state.room.heatDescrip],
+        ['Air Conditioning',this.state.room.airConditioning, this.state.room.airDescrip],
+        ['Breakfast', this.state.room.breakfast, this.state.room.breakfastDescrip],
         ['Desk/Workspace', this.state.room.deskWorkspace],
-        ['Pet Friendly', this.state.room.petFriendly],
+        ['Pet Friendly', this.state.room.petFriendly, this.state.room.petDescrip],
         ['Carbon Detector', this.state.room.carbonDetector],
         ['First Aid', this.state.room.firstAid],
         ['Fire Extinguisher', this.state.room.fireExtinguisher],
