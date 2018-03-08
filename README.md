@@ -27,7 +27,7 @@ Mini Sections covered in the Information Section:
   - configure bundle.js 
     npm run build
   - start server
-    npm run server-dev
+    npm start
     Note: is currently running on port 3003.
   - Seed mongo db with:
     npm run seedDB
