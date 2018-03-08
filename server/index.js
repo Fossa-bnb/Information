@@ -1,8 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fetchRoom = require('../database/fetchRoom');
+const cors = require('cors');
 
 const App = express();
+
+App.use(cors());
 
 App.use(bodyParser.json());
 
@@ -13,11 +16,12 @@ App.get('/:id', (req, res) => {
     if (err) {
       console.log(`ERROR - fetching room: ${err}`);
     } else {
+      res.json({ msg: 'This is CORS-enabled for all origins!' });
       res.send(room);
     }
   });
 });
 
 App.listen(3003, () => {
-  console.log('listening on port 3003');
+  console.log('CORS-enabled web server listening on port 3003');
 });
