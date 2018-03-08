@@ -3,13 +3,18 @@ import Amenities from '../client/app/components/Amenities';
 
 describe('<Amenities /> Component', () => {
   it('should render a div', () => {
-    const wrapper = shallow(<Amenities amenities="" />);
+    const wrapper = shallow(<Amenities amenities={{ amenitiesList: [['', true]] }} />);
     expect(wrapper.is('div')).toEqual(true);
   });
-  it('renders the amenity wifi list item', () => {
-    const amenities = { wifi: true, tv: false };
+  it('should dynamically render an given array', () => {
+    const amenities = {
+      amenitiesList: [
+        ['Essentials', true, 'ToothBrush, HairBrush'],
+        ['Wifi', false],
+        ['Heating', true, 'Wood stove'],
+      ],
+    };
     const wrapper = shallow(<Amenities amenities={amenities} />);
-    // this may be temporary
-    expect(wrapper.find('li').text()).toEqual('Wifi');
+    expect(wrapper.find('li')).toHaveProperty('length', amenities.amenitiesList.length);
   });
 });

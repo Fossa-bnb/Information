@@ -20,7 +20,7 @@ const Amenities = (props) => {
             }
             if (amenity[1] === true) {
               // popUpDescrip tag renders a pop up with text when hovered over the item.
-              return <li tittle={popUpDescrip}>{ amenity[0] } </li>;
+              return <li title={popUpDescrip}>{ amenity[0] } </li>;
             }
             return <li title={popUpDescrip}><s> { amenity[0] } </s> </li>;
           })
