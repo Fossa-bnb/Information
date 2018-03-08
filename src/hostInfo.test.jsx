@@ -11,4 +11,11 @@ describe('<HostInfo /> Component', () => {
     const wrapper = shallow(<HostInfo hostInfo={hostInfo} />);
     expect(wrapper.find('p').text()).toEqual('host info');
   });
+  it('renders the Other Things description paragraph', () => {
+    const hostInfo = { hostVerified: true };
+    const wrapper = mount(<HostInfo hostInfo={hostInfo} />);
+    expect(wrapper.contains([
+      <div>Verified</div>,
+    ])).toEqual(true);
+  });
 });

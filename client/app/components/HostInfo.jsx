@@ -1,12 +1,13 @@
 import React from 'react';
 
 const HostInfo = (props) => {
-  const varified = props.hostInfo.hostVerified ===true ? 'Verified' : '';
+  const varified = props.hostInfo.hostVerified === true ? 'Verified' : '';
   return (
     <div>
       <h2>{ `Hosted by ${props.hostInfo.hostName}` }</h2>
       <div>{ `${props.hostInfo.hostLocation} · ${props.hostInfo.hostDateJoined}` }</div>
-      <div>{`* ${props.hostInfo.hostReviews} Reviews   >${varified}`}</div>
+      <div>{`* ${props.hostInfo.hostReviews} Reviews`}</div>
+      <div>{varified}</div>
       <hr />
       <p>{ props.hostInfo.hostDescription }</p>
       <div>Languages:</div>
