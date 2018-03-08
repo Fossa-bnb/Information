@@ -5,7 +5,7 @@ import HostInfo from './components/HostInfo';
 import Neighborhood from './components/Neighborhood';
 import HostImage from './components/HostImage';
 
-class App extends React.Component {
+class AppPart2 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,7 +57,7 @@ class App extends React.Component {
   }
 }
 
+window.InfoPart2 = AppPart2;
 
-RenderDOM.render(<App id={4} />, document.getElementById('app2'));
+RenderDOM.render(<AppPart2 id={4} />, document.getElementById('app2'));
 
-window.InfoPart2 = App;

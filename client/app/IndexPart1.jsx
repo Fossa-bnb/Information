@@ -8,7 +8,7 @@ import HouseRules from './components/HouseRules';
 import RoomDescription from './components/RoomDescription';
 import RoomHeader from './components/RoomHeader';
 
-class App extends React.Component {
+class AppPart1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -84,6 +84,6 @@ class App extends React.Component {
   }
 }
 
-RenderDOM.render(<App id={4} />, document.getElementById('app'));
+window.InfoPart1 = AppPart1;
 
-window.InfoPart1 = App;
+RenderDOM.render(<AppPart1 id={4} />, document.getElementById('app1'));
