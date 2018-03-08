@@ -25,7 +25,7 @@ Mini Sections covered in the Information Section:
   - start mongoDB instance
     mongod
   - configure bundle.js 
-    npm run react-dev
+    npm run build
   - start server
     npm run server-dev
     Note: is currently running on port 3003.
