@@ -16,7 +16,6 @@ App.get('/:id', (req, res) => {
     if (err) {
       console.log(`ERROR - fetching room: ${err}`);
     } else {
-      res.json({ msg: 'This is CORS-enabled for all origins!' });
       res.send(room);
     }
   });
