@@ -31,4 +31,3 @@ Mini Sections covered in the Information Section:
     Note: is currently running on port 3003.
   - Seed mongo db with:
     npm run seedDB
-    (once you see the full list of 100 items saved manually close db with: ctr + C)
