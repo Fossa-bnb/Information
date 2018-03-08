@@ -19,7 +19,7 @@ class AppPart1 extends React.Component {
   componentDidMount() {
     const roomID = this.props.id;
     $.ajax({
-      url: `/${roomID}`,
+      url: `http://localhost:3003/${roomID}`,
       method: 'GET',
       success: (roomObj) => {
         console.log(`SUCCESS - GET roomObj Part1: ${roomObj[0]}`);
