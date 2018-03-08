@@ -2,7 +2,11 @@
   "name": "information",
   "version": "1.0.0",
   "description": "This app impliments all informaion sections for our moc airbnb rooms page.",
-  "author": "Erin Frolli",
+  "author": {
+    "name": "Erin Frolli",
+    "email": "frolli.erin@gmail.com",
+    "url": "https://github.com/Fossa-bnb/information"
+  },
   "license": "",
   "engines": {
     "node": ">=6.13.0"
