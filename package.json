@@ -7,7 +7,7 @@
     "email": "frolli.erin@gmail.com",
     "url": "https://github.com/Fossa-bnb/information"
   },
-  "license": "",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
