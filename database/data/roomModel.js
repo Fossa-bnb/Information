@@ -1,13 +1,5 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/airbnbInfo');
-const db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {
-  // we're connected!
-});
-
 const roomSchema = mongoose.Schema({
   id: Number,
   title: String,
@@ -61,6 +53,5 @@ const roomSchema = mongoose.Schema({
 });
 
 const Room = mongoose.model('Room', roomSchema);
-
 
 module.exports = Room;
