@@ -1,4 +1,7 @@
-const Room = require('./roomSchema.js');
+const Room = require('./data/roomModel');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/airbnbInfo');
 
 const fetchRoom = (roomId, callback) => {
   Room.find({ id: roomId })
