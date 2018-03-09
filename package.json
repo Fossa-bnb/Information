@@ -2,16 +2,20 @@
   "name": "information",
   "version": "1.0.0",
   "description": "This app impliments all informaion sections for our moc airbnb rooms page.",
-  "author": "Erin Frolli",
-  "license": "",
+  "author": {
+    "name": "Erin Frolli",
+    "email": "frolli.erin@gmail.com",
+    "url": "https://github.com/Fossa-bnb/information"
+  },
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
-    "dropDB": "node database/dropDB.js",
+    "start": "nodemon server/index.js",
+    "build": "webpack -d",
     "seedDB": "node database/seedDB.js",
     "react-dev": "webpack -d --watch",
-    "server-dev": "nodemon server/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
