@@ -23,12 +23,12 @@ Mini Sections covered in the Information Section:
   - See this website on how to get started: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/#run-mongodb
 - Run the following comands in different terminal tabs:
   - Start mongoDB instance
-    mongod
+    - mongod
   - Configure bundle.js 
-    npm run build
+    - npm run build
   - Start server
-    npm start
-    __Note:__ is currently running on port 3003.
+    - npm start
+    - __Note:__ is currently running on port 3003.
   - Seed mongo db with:
-    npm run seedDB
+    - npm run seedDB
     (once you see the full list of 100 items saved manually close db with: ctr + C)
