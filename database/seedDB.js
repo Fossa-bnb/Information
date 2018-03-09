@@ -1,23 +1,17 @@
-const Rooms = require('./data/Rooms.js');
-const saveRoom = require('./saveRooms.js');
-// const mongoose = require('mongoose');
-// const Promise = require('bluebird');
+const seeder = require('mongoose-seed');
+const data = require('./data/Rooms');
 
-Rooms.forEach((room) => {
-  saveRoom(room);
+// Connect to MongoDB via Mongoose
+seeder.connect('mongodb://localhost/airbnbInfo', () => {
+  // Load Mongoose models
+  seeder.loadModels([
+    'database/data/roomModel.js',
+  ]);
+  // Clear specified collections
+  seeder.clearModels(['Room'], () => {
+    // Callback to populate DB once collections have been cleared
+    seeder.populateModels(data, () => {
+      seeder.disconnect();
+    });
+  });
 });
-
-// Tried to get the close to work, but having issues with the way I wrote it
-// Will come back to this
-// const rooms = [];
-// Rooms.forEach((room) => {
-//   rooms.push(saveRoom(room));
-// });
-
-// Promise.all(rooms).then(() => {
-//   mongoose.disconnect(() => {
-//     console.log('Seeded database');
-//     console.log('Database connection closed');
-//   });
-// });
-

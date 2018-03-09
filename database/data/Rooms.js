@@ -2,6 +2,7 @@ const faker = require('faker');
 
 const rooms = [];
 
+// create fake room data using faker
 for (let i = 1; i < 101; i += 1) {
   rooms.push({
     id: i,
@@ -55,4 +56,14 @@ for (let i = 1; i < 101; i += 1) {
   });
 }
 
-module.exports = rooms;
+
+// Data array containing seed data - documents organized by Model
+// Format needed for mongoose-seed library.
+const data = [
+  {
+    model: 'Room',
+    documents: rooms,
+  },
+];
+
+module.exports = data;
