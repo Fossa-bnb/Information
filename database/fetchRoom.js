@@ -7,7 +7,7 @@ const fetchRoom = (roomId, callback) => {
   Room.find({ id: roomId })
     .exec((err, room) => {
       if (err) {
-        console.log('Fetch Room Error:', err);
+        console.log('Fetch Room Error:');
       } else {
         callback(null, room);
       }
