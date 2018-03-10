@@ -1,0 +1,54 @@
+.regulaText {
+  color: #484848 !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.2px !important;
+  line-height: 22px !important;
+}
+
+
+.boldText{
+  font-weight: normal !important;
+  color: #484848 !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  margin: 0px !important;
+  word-wrap: break-word !important;
+  font-size: 17px !important;
+  line-height: 22px !important;
+  letter-spacing: 0.2px !important;
+  display: inline !important;
+}
+
+.roomType {
+  margin: 0px !important;
+  word-wrap: break-word !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  font-size: 15px !important;
+  line-height: 18px !important;
+  letter-spacing: 0.2px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  color: #484848 !important;
+  font-weight: 300 !important;
+}
+
+/* #links{
+  color: #008489 !important;
+  font: inherit !important;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  text-decoration: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background: transparent !important;
+  border: 0px !important;
+  cursor: pointer !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+  text-align: left !important;
+} */
