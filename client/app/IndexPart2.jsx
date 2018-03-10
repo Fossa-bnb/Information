@@ -4,6 +4,7 @@ import $ from 'jquery';
 import HostInfo from './components/HostInfo';
 import Neighborhood from './components/Neighborhood';
 import HostImage from './components/HostImage';
+import styles from './components/styles.css';
 
 class AppPart2 extends React.Component {
   constructor(props) {
@@ -48,9 +49,9 @@ class AppPart2 extends React.Component {
       mapUrl: this.state.room.mapUrl,
     };
     return (
-      <div>
-        <HostInfo hostInfo={hostInfo} />
+      <div className="regText">
         <HostImage hostImage={this.state.room.hostImageUrl} />
+        <HostInfo hostInfo={hostInfo} />
         <Neighborhood neighborhood={neighborhood} />
       </div>
     );

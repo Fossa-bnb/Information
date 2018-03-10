@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './styles.css';
 
 const RoomHeader = (props) => {
   const bathWords = props.roomHeader.bath === 1 ? 'bath' : 'baths';
@@ -6,7 +7,7 @@ const RoomHeader = (props) => {
   const bedWords = props.roomHeader.bed === 1 ? 'bed' : 'beds';
   return (
     <div>
-      <div>{ props.roomHeader.roomType }</div>
+      <div className="roomType">{ props.roomHeader.roomType }</div>
       <h1>{ props.roomHeader.title }</h1>
       <div>{ props.roomHeader.city }</div>
       <br />

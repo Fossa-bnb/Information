@@ -74,8 +74,8 @@ class AppPart1 extends React.Component {
 
     return (
       <div className="regText">
-        <RoomHeader roomHeader={roomHeader} />
         <HostImage hostImage={this.state.room.hostImageUrl} />
+        <RoomHeader roomHeader={roomHeader} />
         <RoomDescription roomInfo={roomInfo} />
         <Amenities amenities={amenities} />
         <HouseRules houseRules={this.state.room.houseRulesDescription} />

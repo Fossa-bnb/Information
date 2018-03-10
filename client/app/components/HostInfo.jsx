@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './styles.css';
 
 const HostInfo = (props) => {
   const varified = props.hostInfo.hostVerified === true ? 'Verified' : '';

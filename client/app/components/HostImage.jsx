@@ -1,7 +1,7 @@
 import React from 'react';
 
 const HostImage = props => (
-  <img src={props.hostImage} alt="HostImage" />
+  <img className="hostImg" src={props.hostImage} alt="HostImage" />
 );
 
 export default HostImage;
