@@ -10,11 +10,15 @@ const RoomHeader = (props) => {
       <h1>{ props.roomHeader.title }</h1>
       <div>{ props.roomHeader.city }</div>
       <br />
-      <li>{ `${props.roomHeader.guest} guests` }</li>
-      <li>{ `${props.roomHeader.bed} ${bedWords}` }</li>
-      <li>{ `${props.roomHeader.bath} ${bathWords}` }</li>
-      <li>{ `${props.roomHeader.room} ${roomWords}` }</li>
-      <li>{ `${props.roomHeader.bedType}` }</li>
+      <img className="icons" src="./icons/people.png" alt={'Guest'} />
+      <div>{ `${props.roomHeader.guest} guests` }</div>
+      <img className="icons" src="./icons/local_hotel.png" alt={'Bed'} />
+      <div>{ `${props.roomHeader.bed} ${bedWords}` }</div>
+      <img className="icons" src="./icons/hot_tub.png" alt={'Bath'} />
+      <div>{ `${props.roomHeader.bath} ${bathWords}` }</div>
+      <img className="icons" src="./icons/account_balance.png" alt={'Room'} />
+      <div>{ `${props.roomHeader.room} ${roomWords}` }</div>
+      <div>{ `${props.roomHeader.bedType}` }</div>
     </div>
   );
 };
