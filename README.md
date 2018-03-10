@@ -57,12 +57,12 @@ HOST = 127.0.0.1
 ```
 
 Nex configure your bundle.js using webpack:
-```
+```sh
 npm run build
 ```
 
 To start runing your app run:
-```
+```sh
 npm start
 ```
 __In a browser navigate to localhost:3003 or the directory you specified in the .env file__
