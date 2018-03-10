@@ -14,15 +14,25 @@ const Amenities = (props) => {
           amenitiesArray.map((amenity) => {
             let popUpDescrip = '';
             // not all of the amenities have popUp descriptions
-            if (amenity[2] !== undefined) {
+            if (amenity[3] !== undefined) {
               // if has a popUp description
-              popUpDescrip = amenity[2];
+              popUpDescrip = amenity[3];
             }
             if (amenity[1] === true) {
               // popUpDescrip tag renders a pop up with text when hovered over the item.
-              return <li title={popUpDescrip}>{ amenity[0] } </li>;
+              return (
+                <div>
+                  <img className="icons" src={amenity[2]} alt={amenity[0]} />
+                  <div className="amenities" title={popUpDescrip}>{ amenity[0] } </div>
+                </div>
+              );
             }
-            return <li title={popUpDescrip}><s> { amenity[0] } </s> </li>;
+            return (
+              <div>
+                <img className="icons" src={amenity[2]} alt={amenity[0]} />
+                <div className="amenities" title={popUpDescrip}><s> { amenity[0] } </s> </div>
+              </div>
+            );
           })
         }
       </div>
