@@ -34,6 +34,8 @@
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "css-loader": "^0.28.10",
+    "dotenv": "^5.0.1",
+    "dotenv-webpack": "^1.5.5",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "express": "^4.16.2",
