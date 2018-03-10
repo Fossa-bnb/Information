@@ -1,6 +1,7 @@
 ## MAC files ##
 .DS_Store
 .vscode/
+.env
 
 ## NPM ##
 npm
