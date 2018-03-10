@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 const BUILD_DIR = path.resolve(__dirname, 'client/public');
 const APP_DIR = path.resolve(__dirname, 'client/app');
@@ -26,6 +27,9 @@ const config = {
   resolve: {
     extensions: ['.css', '.js', '.jsx'],
   },
+  plugins: [
+    new Dotenv(),
+  ],
 };
 
 module.exports = config;
