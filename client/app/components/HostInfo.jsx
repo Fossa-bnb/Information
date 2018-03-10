@@ -11,11 +11,11 @@ const HostInfo = (props) => {
       <div>{varified}</div>
       <hr />
       <p>{ props.hostInfo.hostDescription }</p>
-      <div>Languages:</div>
-      <div className="boldText"> {`   ${props.hostInfo.hostLanguage}`}</div>
-      <div>Response rate:</div>
+      <div>Languages:  </div>
+      <div className="boldText"> {`  ${props.hostInfo.hostLanguage}`}</div>
+      <div>Response rate:  </div>
       <div className="boldText"> {`   ${props.hostInfo.hostResponseRate}%`}</div>
-      <div>Response time:</div>
+      <div>Response time:  </div>
       <div className="boldText"> {`   ${props.hostInfo.hostResponseTime}`}</div>
       <hr />
       <div className="boldText">Always communicate through Airbnb · </div>
