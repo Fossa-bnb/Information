@@ -5,7 +5,10 @@ import HostInfo from './components/HostInfo';
 import Neighborhood from './components/Neighborhood';
 import HostImage from './components/HostImage';
 import styles from './components/styles.css';
-const localHost = `${HOST}${POST}/` || 'http://localhost:3003/';
+
+const portNumber = process.env.PORT;
+const host = process.env.HOST;
+const localHost = (portNumber !== undefined) ? `http://${host}:${portNumber}/` : 'http://localhost:3003/';
 
 
 class AppPart2 extends React.Component {

@@ -8,9 +8,10 @@ import HouseRules from './components/HouseRules';
 import RoomDescription from './components/RoomDescription';
 import RoomHeader from './components/RoomHeader';
 import styles from './components/styles.css';
-require('dotenv').load();
 
-const localHost = `${HOST}${POST}/` || 'http://localhost:3003/';
+const portNumber = process.env.PORT;
+const host = process.env.HOST;
+const localHost = (portNumber !== undefined) ? `http://${host}:${portNumber}/` : 'http://localhost:3003/';
 
 class AppPart1 extends React.Component {
   constructor(props) {
@@ -48,11 +49,11 @@ class AppPart1 extends React.Component {
         ['TV', this.state.room.tv, `${localHost}icons/live_tv.png`],
         ['Heating', this.state.room.heating, `${localHost}icons/whatshot.png`, this.state.room.heatDescrip],
         ['Air Conditioning', this.state.room.airConditioning, `${localHost}icons/ac_unit.png`, this.state.room.airDescrip],
-        ['Breakfast', this.state.room.breakfast,  ${localHost}icons/free_breakfast.png , this.state.room.breakfastDescrip],
+        ['Breakfast', this.state.room.breakfast, `${localHost}icons/free_breakfast.png`, this.state.room.breakfastDescrip],
         ['Desk/Workspace', this.state.room.deskWorkspace, `${localHost}icons/folder.png`],
         ['Pet Friendly', this.state.room.petFriendly, `${localHost}icons/pets.png`, this.state.room.petDescrip],
         ['Carbon Detector', this.state.room.carbonDetector, `${localHost}icons/notifications_active.png`],
-        ['First Aid', this.state.room.firstAid,  `${localHost}icons/local_hospital.png `],
+        ['First Aid', this.state.room.firstAid, `${localHost}icons/local_hospital.png`],
         ['Fire Extinguisher', this.state.room.fireExtinguisher, `${localHost}icons/toys.png`],
         ['Smoke Detector', this.state.room.smokeDetector, `${localHost}icons/smoke_free.png`],
       ],

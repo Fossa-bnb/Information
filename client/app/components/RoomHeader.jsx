@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './styles.css';
-const localHost = `${HOST}${POST}/` || 'http://localhost:3003/';
+
+const portNumber = process.env.PORT;
+const host = process.env.HOST;
+const localHost = (portNumber !== undefined) ? `http://${host}:${portNumber}/` : 'http://localhost:3003/';
 
 const RoomHeader = (props) => {
   const bathWords = props.roomHeader.bath === 1 ? 'bath' : 'baths';
