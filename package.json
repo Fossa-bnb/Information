@@ -33,6 +33,7 @@
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
+    "css-loader": "^0.28.10",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "express": "^4.16.2",
@@ -43,6 +44,7 @@
     "mongoose-seed": "^0.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "style-loader": "^0.20.3",
     "underscore": "^1.8.3",
     "webpack": "^3.11.0"
   },

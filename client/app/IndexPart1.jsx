@@ -7,6 +7,7 @@ import HostImage from './components/HostImage';
 import HouseRules from './components/HouseRules';
 import RoomDescription from './components/RoomDescription';
 import RoomHeader from './components/RoomHeader';
+import styles from './components/styles.css';
 
 class AppPart1 extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class AppPart1 extends React.Component {
         ['Closet/Drawers', this.state.room.closetDrawers, './icons/dns.png'],
         ['TV', this.state.room.tv, './icons/live_tv.png'],
         ['Heating', this.state.room.heating, './icons/whatshot.png', this.state.room.heatDescrip],
-        ['Air Conditioning',this.state.room.airConditioning, './icons/ac_unit.png',this.state.room.airDescrip],
+        ['Air Conditioning', this.state.room.airConditioning, './icons/ac_unit.png', this.state.room.airDescrip],
         ['Breakfast', this.state.room.breakfast, './icons/free_breakfast.png', this.state.room.breakfastDescrip],
         ['Desk/Workspace', this.state.room.deskWorkspace, './icons/folder.png'],
         ['Pet Friendly', this.state.room.petFriendly, './icons/pets.png', this.state.room.petDescrip],
@@ -72,7 +73,7 @@ class AppPart1 extends React.Component {
     };
 
     return (
-      <div>
+      <div className="regText">
         <RoomHeader roomHeader={roomHeader} />
         <HostImage hostImage={this.state.room.hostImageUrl} />
         <RoomDescription roomInfo={roomInfo} />

@@ -17,10 +17,14 @@ const config = {
         include: APP_DIR,
         loader: 'babel-loader',
       },
+      {
+        test: /\.css?/,
+        loader: 'style-loader!css-loader',
+      },
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.css', '.js', '.jsx'],
   },
 };
 
