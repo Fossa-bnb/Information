@@ -5,6 +5,8 @@ import HostInfo from './components/HostInfo';
 import Neighborhood from './components/Neighborhood';
 import HostImage from './components/HostImage';
 import styles from './components/styles.css';
+const localHost = `${HOST}${POST}/` || 'http://localhost:3003/';
+
 
 class AppPart2 extends React.Component {
   constructor(props) {
@@ -17,7 +19,7 @@ class AppPart2 extends React.Component {
   componentDidMount() {
     const roomID = this.props.id;
     $.ajax({
-      url: `http://localhost:3003/${roomID}`,
+      url: `${localHost}${roomID}`,
       method: 'GET',
       success: (roomObj) => {
         console.log(`SUCCESS - GET roomObj Part2: ${roomObj[0]}`);
