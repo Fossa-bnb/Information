@@ -17,7 +17,7 @@ describe('<RoomHeader /> Component', () => {
     const roomHeader = { roomType: 'Full House' };
     const wrapper = mount(<RoomHeader roomHeader={roomHeader} />);
     expect(wrapper.contains([
-      <div>Full House</div>,
+      <div className="roomType">Full House</div>,
     ])).toEqual(true);
   });
   it('renders the city in the room header', () => {
@@ -38,11 +38,11 @@ describe('<RoomHeader /> Component', () => {
 
     const wrapper = mount(<RoomHeader roomHeader={roomHeader} />);
     expect(wrapper.contains([
-      <li>10 guests</li>,
-      <li>12 beds</li>,
-      <li>3 baths</li>,
-      <li>7 rooms</li>,
-      <li>queen</li>,
+      <section>10 guests</section>,
+      <section>12 beds</section>,
+      <section>3 baths</section>,
+      <section>7 rooms</section>,
+      <section>queen</section>,
     ])).toEqual(true);
   });
   it('renders the singular tense of summery lists in the header if the value is 1', () => {
@@ -54,9 +54,9 @@ describe('<RoomHeader /> Component', () => {
 
     const wrapper = mount(<RoomHeader roomHeader={roomHeader} />);
     expect(wrapper.contains([
-      <li>1 bed</li>,
-      <li>1 bath</li>,
-      <li>1 room</li>,
+      <section>1 bed</section>,
+      <section>1 bath</section>,
+      <section>1 room</section>,
     ])).toEqual(true);
   });
 });

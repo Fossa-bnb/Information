@@ -2,9 +2,10 @@ import React from 'react';
 
 const Amenities = (props) => {
   const amenitiesArray = props.amenities.amenitiesList;
-  // amenities[0] - amenities Name
-  // amenities[1] - ammenites exsists
-  // amenities[2] - ammenities popUp message
+  // amenity[0] - ammenities Name
+  // amenity[1] - ammenities exsists
+  // amenity[2] - ammenities .png
+  // amenity[3] - ammenities popUp message
 
   return (
     <div>
@@ -23,14 +24,14 @@ const Amenities = (props) => {
               return (
                 <div>
                   <img className="icons" src={amenity[2]} alt={amenity[0]} />
-                  <div className="amenities" title={popUpDescrip}>{ amenity[0] } </div>
+                  <section className="amenities" title={popUpDescrip}>{ amenity[0] } </section>
                 </div>
               );
             }
             return (
               <div>
                 <img className="icons" src={amenity[2]} alt={amenity[0]} />
-                <div className="amenities" title={popUpDescrip}><s> { amenity[0] } </s> </div>
+                <section className="amenities" title={popUpDescrip}><s> { amenity[0] } </s> </section>
               </div>
             );
           })

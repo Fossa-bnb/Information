@@ -15,6 +15,6 @@ describe('<Amenities /> Component', () => {
       ],
     };
     const wrapper = shallow(<Amenities amenities={amenities} />);
-    expect(wrapper.find('li')).toHaveProperty('length', amenities.amenitiesList.length);
+    expect(wrapper.find('section')).toHaveProperty('length', amenities.amenitiesList.length);
   });
 });

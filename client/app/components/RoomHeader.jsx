@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './styles.css';
 
 const portNumber = process.env.PORT;
 const host = process.env.HOST;
@@ -16,14 +15,14 @@ const RoomHeader = (props) => {
       <div>{ props.roomHeader.city }</div>
       <br />
       <img className="icons" src={`${localHost}/icons/people.png`} alt='Guest' />
-      <div>{ `${props.roomHeader.guest} guests` }</div>
+      <section>{ `${props.roomHeader.guest} guests` }</section>
       <img className="icons" src={`${localHost}/icons/local_hotel.png`} alt='Bed' />
-      <div>{ `${props.roomHeader.bed} ${bedWords}` }</div>
+      <section>{ `${props.roomHeader.bed} ${bedWords}` }</section>
       <img className="icons" src={`${localHost}/icons/hot_tub.png`} alt='Bath' />
-      <div>{ `${props.roomHeader.bath} ${bathWords}` }</div>
+      <section>{ `${props.roomHeader.bath} ${bathWords}` }</section>
       <img className="icons" src={`${localHost}/icons/account_balance.png`} alt='Room' />
-      <div>{ `${props.roomHeader.room} ${roomWords}` }</div>
-      <div>{ `${props.roomHeader.bedType}` }</div>
+      <section>{ `${props.roomHeader.room} ${roomWords}` }</section>
+      <section>{ `${props.roomHeader.bedType}` }</section>
     </div>
   );
 };
