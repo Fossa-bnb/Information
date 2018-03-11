@@ -27,7 +27,7 @@ describe('<RoomHeader /> Component', () => {
       <div>Vallejo</div>,
     ])).toEqual(true);
   });
-  it('renders the room summery lists in the header', () => {
+  it('renders the room summery sections in the header', () => {
     const roomHeader = {
       guest: 10,
       bed: 12,
@@ -41,11 +41,9 @@ describe('<RoomHeader /> Component', () => {
       <section>10 guests</section>,
       <section>12 beds</section>,
       <section>3 baths</section>,
-      <section>7 rooms</section>,
-      <section>queen</section>,
     ])).toEqual(true);
   });
-  it('renders the singular tense of summery lists in the header if the value is 1', () => {
+  it('renders the singular tense of summery sections in the header if the value is 1', () => {
     const roomHeader = {
       bed: 1,
       bath: 1,
